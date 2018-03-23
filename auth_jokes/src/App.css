@@ -33,15 +33,49 @@
   width: 75px;
 }
 
-fieldset {
-  margin: 5px auto;
-  width: 50%;
-}
 
 button {
-  width: 150px;
-  margin-left: 23%;
   text-align: center;
+}
+
+.SignIn-header {
+  text-align: center;
+  margin-left: 5%;
+  font-size: 2.0em;
+  font-weight: 800;
+  padding-top: 15px;
+}
+.SignUp-header {
+  text-align: center;
+  margin-left: 5%;
+  font-size: 2.0em;
+  font-weight: 800;
+  padding-top: 15px;
+}
+.jokes-header {
+  text-align: center;
+  margin-left: 5%;
+  font-size: 2.0em;
+  font-weight: 800;
+  padding-top: 15px;
+}
+.Root-page-text {
+  margin-left: 7%;
+  font-size: 2.0em;
+  font-weight: 800;
+  padding-top: 15px;
+}
+.Header-links {
+  font-size: 1.2em;
+}
+.Login-Link {
+  margin-right: 5%;
+  margin-left: 6%;
+}
+
+.ui.form {
+  text-align: center;
+  margin-left: 5%;
 }
 
 @keyframes App-logo-spin {

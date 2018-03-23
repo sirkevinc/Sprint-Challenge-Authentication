@@ -18,7 +18,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(rootReducer)}>
     <Router>
       <div>
-        <Route path="/" component={App} />
+        <Route exact path="/" component={App} />
         <Route path="/login" component={SignIn} />
         <Route path="/users" component={SignUp} />
         <Route path="/jokes" component={RequireAuth(Jokes)} />
