@@ -46,5 +46,5 @@ SignUp = connect(mapStateToProps, { register })(SignUp);
 
 export default reduxForm({
   form: 'signup',
-  fields: ['username', 'password', 'confirmPassword']
+  fields: ['username', 'password']
 })(SignUp);
