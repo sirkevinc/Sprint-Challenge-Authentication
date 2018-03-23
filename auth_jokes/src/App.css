@@ -9,17 +9,39 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
   font-size: 1.5em;
+  margin-left: 40px;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.joke {
+  list-style: none;
+  text-align: center;
+  line-height: 2;
+}
+
+.joke hr {
+  width: 75px;
+}
+
+fieldset {
+  margin: 5px auto;
+  width: 50%;
+}
+
+button {
+  width: 150px;
+  margin-left: 23%;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

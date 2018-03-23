@@ -19,7 +19,6 @@ class SignUp extends Component {
     console.log(this.props);
     return  (
     <div>
-      <p>Sign Up</p>
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
         <fieldset>
           <label>Username:</label>
