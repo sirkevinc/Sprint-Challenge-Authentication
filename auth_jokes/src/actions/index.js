@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:5000/api';
+axios.defaults.withCredentials = true;
+const URL = 'http://localhost:5000';
 
 export const USER_REGISTERED = 'USER_REGISTERED';
 export const USER_AUTHENTICATED = 'USER_AUTHENTICATED';
@@ -24,7 +25,7 @@ export const checkAuth = () => {
 export const register = (username, password, history) => {
   return (dispatch) => {
     axios
-      .post(`${URL}/users`, { username, password })
+      .post(`${URL}/api/users`, { username, password })
       .then(() => {
         dispatch({
           type: USER_REGISTERED,
@@ -40,9 +41,8 @@ export const register = (username, password, history) => {
 export const login = (username, password, history) => {
   return (dispatch) => {
     axios
-      .post(`${URL}/login`, { username, password })
+      .post(`${URL}/api/login`, { username, password })
       .then(response => {
-        console.log('response', response);
         dispatch({
           type: USER_AUTHENTICATED,
         });
@@ -58,7 +58,7 @@ export const login = (username, password, history) => {
 export const displayJokes = () => {
   return (dispatch) => {
     axios
-      .get(`${URL}/jokes`, {
+      .get(`${URL}/api/jokes`, {
         headers: {
           Authorization: localStorage.getItem('token'),
         },

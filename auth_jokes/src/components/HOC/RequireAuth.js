@@ -5,7 +5,7 @@ import { checkAuth } from '../../actions';
 export default WrappedComponent => {
   class RequireAuthentication extends React.Component {
     componentWillMount() {
-      if (!this.props.authenticated) this.props.history.push('/signin');
+      if (!this.props.authenticated) this.props.history.push('/login');
     }
   render() {
     return (

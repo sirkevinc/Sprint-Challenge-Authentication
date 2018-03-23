@@ -8,10 +8,17 @@ class Jokes extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <ul>
         {this.props.jokes.map((joke, i) => {
-          return <li key={i}>{joke}</li>
+          return (
+            <div key={i} className="joke">
+              <li>{joke.setup}</li>
+              <li>{joke.punchline}</li>
+              <hr />
+            </div>
+          )
         })}
       </ul>
     );

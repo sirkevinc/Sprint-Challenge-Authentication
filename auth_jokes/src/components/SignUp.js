@@ -5,7 +5,7 @@ import { reduxForm, Field } from 'redux-form';
 import { register } from '../actions';
 
 class SignUp extends Component {
-  handleFormSubmit = (username, password) => {
+  handleFormSubmit ({ username, password }) {
     this.props.register(username, password, this.props.history);
   }
 
@@ -16,10 +16,11 @@ class SignUp extends Component {
 
   render() {
     const { handleSubmit } = this.props;
+    console.log(this.props);
     return  (
     <div>
       <p>Sign Up</p>
-      <form onSubmit={handleSubmit(this.handleFormSubmit)}>
+      <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
         <fieldset>
           <label>Username:</label>
           <Field name="username" component="input" type="text" />
