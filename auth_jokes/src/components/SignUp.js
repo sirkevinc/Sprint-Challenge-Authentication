@@ -1,4 +1,3 @@
-// Complete the component in this file.
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
@@ -19,6 +18,7 @@ class SignUp extends Component {
     console.log(this.props);
     return  (
     <div>
+      <p>Sign Up</p>
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
         <fieldset>
           <label>Username:</label>
